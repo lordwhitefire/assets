@@ -30,8 +30,18 @@ export function updateProductDetails(product) {
     productImage.setAttribute('data-large_image', product.image.dataLargeImage);
     productImage.setAttribute('srcset', product.image.srcset);
 
+    // updating the type links 
+    const trailItemLink = document.querySelector('#middle a');
+    trailItemLink.href = product.type;
 
-   
+    // updating the type text 
+    const trailItemText = document.querySelector('#middle_text');
+    trailItemLink.textContent = product.type_text;
+
+    // updating the product name 
+    const trailItemName = document.querySelector('#name');
+    trailItemName.textContent = product.name;
+    
     // Update product title
     const productTitle = document.querySelector('.product_title');
     productTitle.textContent = product.name;
