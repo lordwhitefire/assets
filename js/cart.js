@@ -1,18 +1,27 @@
 let cartItems = [];
 
 export function addToCart(product) {
-    let existingItem = cartItems.find(item => item.id === product.id);
-
-    if (existingItem) {
-        existingItem.quantity += product.quantity;
-    } else {
-        cartItems.push(product);
-    }
-
-    console.log(`Item with ID ${product.id} added to cart.`);
-    logCartItems(); // Log the updated cart items
-    saveCartToStorage(); // Save updated cart to localStorage
+    loadCartFromStorage();
+    // Ensure cartItems array exists
+// Check if cartItems is an array
+if (!Array.isArray(cartItems)) {
+ console.log("cartItems was not an array. Initializing it as an empty array.");
+ cartItems = []; // Initialize it if it's not an array
 }
+
+ let existingItem = cartItems.find(item => item.id === product.id);
+
+ if (existingItem) {
+     existingItem.quantity += product.quantity;
+ } else {
+     cartItems.push(product);
+ }
+
+ console.log(`Item with ID ${product.id} added to cart.`);
+ logCartItems(); // Log the updated cart items
+ saveCartToStorage(); // Save updated cart to localStorage
+}
+
 
 export function initCart() {
     console.log('Cart script initialized.');
@@ -23,12 +32,23 @@ export function initCart() {
     updateCartUI()
 }
 
-function loadCartFromStorage() {
+
+export function initCartpage() {
+    console.log('Cart script initialized.hhhhhhhhhhhhhhhhhhhh');
+    // Load cartItems from localStorage on initialization
+    loadCartFromStorage();
+    
+    // Call updateCartUI to reflect any pre-existing cart items
+    logCartItems();
+} 
+
+
+export function loadCartFromStorage() {
     let storedCart = localStorage.getItem('cartItems');
     cartItems = storedCart ? JSON.parse(storedCart) : [];
 }
 
-function saveCartToStorage() {
+export function saveCartToStorage() {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
 }
 
@@ -181,7 +201,7 @@ const UI = (() => {
 
 
 
-export function updateCartUI() {
+function updateCartUI() {
 
     
     // Select the content area where the cart UI will be updated
@@ -312,3 +332,5 @@ function updateCartItemQuantity(itemId, quantity) {
 export function logCartItems() {
     console.log('Current cart items:', cartItems);
 }
+
+

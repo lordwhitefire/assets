@@ -58,12 +58,29 @@ export function updateProductDetails(product) {
      const productDescription = document.querySelector('#description');
      productDescription.textContent = product.description;
    
-    // Update product category
-    const categorySpan = document.querySelector('.posted_in');
-    const categoryLink = categorySpan.querySelector('a');
-    categoryLink.href = product.category_1_link;
-    categoryLink.textContent = product.category_1_text;
+  // Select the <span> element with the class 'posted_in'
+const postedInSpan = document.querySelector('.posted_in');
 
+// Ensure the element exists before proceeding
+if (postedInSpan) {
+    // Select all <a> tags within the 'posted_in' span
+    const categoryLinks = postedInSpan.querySelectorAll('a');
+
+    // Update the first <a> tag
+    if (categoryLinks[0]) {
+        categoryLinks[0].href = product.category_1_link;
+        categoryLinks[0].textContent = product.category_1_text;
+    }
+
+    // Update the second <a> tag
+    if (categoryLinks[1]) {
+        categoryLinks[1].href = product.category_2_link;
+        categoryLinks[1].textContent = product.category_2_text;
+    }
+}
+  
+
+ 
     // Update product tags
     const tagsSpan = document.querySelector('.tagged_as');
     const tagLinks = tagsSpan.querySelectorAll('a');
@@ -80,6 +97,13 @@ export function updateProductDetails(product) {
         tagLinks[2].href = product.tag_3_link;
         tagLinks[2].textContent = product.tag_3_text;
     }
+
+    // Select the input element by its class
+const quantityInput = document.querySelector('.input-text.qty.text');
+
+// Change the ID
+quantityInput.id = product.id;
+
 
     console.log('Product details updated:', product);
 }
