@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     loadCartFromStorage();
     logCartItems();
-    console.log('add to cart.js  HFGHFGFHhhhhhhhhhhhhhhhhhscript is loaded and DOM is fully parsed.');
+    console.log('add to cart.js script is loaded and DOM is fully parsed.');
 
     // Event listener for adding items to cart
     document.querySelectorAll('.ajax_add_to_cart').forEach(button => {
@@ -94,15 +94,22 @@ document.addEventListener('DOMContentLoaded', function() {
             // Update button UI
             console.log('Adding product to cart:', productToAdd);
             
+            const existingMessageDiv = document.querySelector('.woocommerce-message');
+
+            // If the div already exists, return
+            if (existingMessageDiv) {
+                
+                return;
+            }
+        
             // Create a new div with the exact HTML content
             const messageDiv = document.createElement('div');
             messageDiv.className = 'woocommerce-message';
-            messageDiv.role = 'alert';
+            messageDiv.setAttribute('role', 'alert');
             messageDiv.innerHTML = `
                 <a href="my-accounts/cart.html" class="button wc-forward">View cart</a>
                 “${productTitle}” has been added to your cart.
             `;
-
             // Find the woocommerce_breadcrumb element
             const breadcrumbDiv = document.querySelector('.woocommerce-breadcrumb');
 
