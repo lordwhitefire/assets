@@ -20,7 +20,7 @@ export const products = [
         dataThumb: "https://lordwhitefire.github.io/assets/epiphany/100/AgeDefying_Collagen-100*100.jpeg",
         href: "https://lordwhitefire.github.io/assets/epiphany/600/AgeDefying_Collagen.jpeg",
         src: "https://lordwhitefire.github.io/assets/epiphany/600/AgeDefying_Collagen.jpeg",
-        title: "product-8",
+        title: "product-1",
         dataSrc: "https://lordwhitefire.github.io/assets/epiphany/600/AgeDefying_Collagen.jpeg",
         dataLargeImage: "https://lordwhitefire.github.io/assets/epiphany/600/AgeDefying_Collagen.jpeg",
         srcset: "https://lordwhitefire.github.io/assets/epiphany/300/AgeDefying_Collagen-300*300.jpeg 300w, https://lordwhitefire.github.io/assets/epiphany/600/AgeDefying_Collagen.jpeg 600w, https://lordwhitefire.github.io/assets/epiphany/100/AgeDefying_Collagen-100*100.jpeg 100w, https://lordwhitefire.github.io/assets/epiphany/150/AgeDefying_Collagen-150*150.jpeg 150w",
@@ -31,6 +31,41 @@ export const products = [
       dataProductId: "001",
       description: "Glutathione White with Mulberry and Vitamin C lightens and evens out your complexion. Anti-ageing, moisturizing, and enriched with collagen, it ensures youthful, glowing skin. Made in the USA, ensuring purity and potency."
     },
+    {
+      id: "product-002",
+      type: "https://lordwhitefire.github.io/eliphany/pages/products/women.html",
+     
+      type_text: "Women",
+      category_1_link: "https://lordwhitefire.github.io/eliphany/pages/products/skin.html",
+      category_1_text: "Skin",
+      category_2_link: "https://lordwhitefire.github.io/eliphany/pages/products/women.html",
+      category_2_text: "Women",
+      tag_1_link: "https://lordwhitefire.github.io/eliphany/pages/products/comfort/",
+      tag_1_text: "comfort",
+      tag_2_link: "https://lordwhitefire.github.io/eliphany/pages/products/women.html",
+      tag_2_text: "women",
+      tag_3_link: "https://lordwhitefire.github.io/eliphany/pages/products/skin.html",
+      tag_3_text: "skin",
+      name: "Ladies Shine Advanced Skin Supplement",
+      image: {
+        dataThumb: "https://lordwhitefire.github.io/assets/epiphany/100/LadiesShine_Supplement-100*100.jpeg",
+        href: "https://lordwhitefire.github.io/assets/epiphany/600/LadiesShine_Supplement.jpeg",
+        src: "https://lordwhitefire.github.io/assets/epiphany/600/LadiesShine_Supplement.jpeg",
+        title: "product-2",
+        dataSrc: "https://lordwhitefire.github.io/assets/epiphany/600/LadiesShine_Supplement.jpeg",
+        dataLargeImage: "https://lordwhitefire.github.io/assets/epiphany/600/LadiesShine_Supplement.jpeg",
+        srcset: "https://lordwhitefire.github.io/assets/epiphany/300/LadiesShine_Supplement-300*300.jpeg 300w, https://lordwhitefire.github.io/assets/epiphany/600/LadiesShine_Supplement.jpeg 600w, https://lordwhitefire.github.io/assets/epiphany/100/LadiesShine_Supplement-100*100.jpeg 100w, https://lordwhitefire.github.io/assets/epiphany/150/LadiesShine_Supplement-150*150.jpeg 150w",
+  
+   
+     
+      },
+      price: 0.00,
+      shortDescription: "Ladies Shine Advanced eliminates knuckle wrinkles, provides UV protection, and smooths skin. Contains natural ingredients for overall skin enhancement and dark spot reduction.",
+    
+      dataProductId: "001",
+      description: "Ladies Shine Advanced enhances skin health. It smooths body and knuckle skin, offers UV protection, and reduces wrinkles. Natural ingredients ensure effective and gentle care."
+    },
+    
     {
       id: "product-114",
       type: "https://www.prodesigns.com/wordpress-themes/demo/ecommerce-gem/product-category/clothing/",
