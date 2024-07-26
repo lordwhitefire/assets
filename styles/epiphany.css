@@ -23,8 +23,9 @@
 
 /* Optional: Additional styles for hover effect */
 .hand-cursor:hover {
-    background-color: #f0f0f0; /* Example: Change background color on hover */
-    color: #000; /* Example: Change text color on hover */
+    background-color: #2e2e2e !important;/* Example: Change background color on hover */
+    border-color: #2e2e2e !important;
+   color: #fff !important; /* Example: Change text color on hover */
 }
     
 
